@@ -14,9 +14,10 @@ const validate = () => {
             e.target.value = e.target.value.replace(/[^a-zA-z@\-\.\!\~\*\']/g, '') 
     }))
 
-    formMsg.addEventListener('input', (e) => {
-        e.target.value = e.target.value.replace(/[^а-яА-Я\-\s]/g, '') 
-    })
+    formMsg.forEach(formMsg =>
+        formMsg.addEventListener('input', (e) => {
+            e.target.value = e.target.value.replace(/[^а-яА-Я\-\s]/g, '') 
+    }))
 
     formNum.forEach(formNum =>
         formNum.addEventListener('input', (e) => {
